@@ -182,6 +182,7 @@ const listMessages = (item: Content) => {
     </div>
 `
 
+
     messagesComponent?.appendChild(content)
 }
 
