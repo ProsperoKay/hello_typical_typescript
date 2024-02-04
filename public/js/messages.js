@@ -1,4 +1,3 @@
-"use strict";
 const messageContent = [
     {
         title: "The Transpilation Tribulation",
@@ -45,18 +44,4 @@ const messageContent = [
         body: "TypeScript is like a hyperactive toddler, dynamic and evolving. Python is like a wise old sage, stable and mature."
     }
 ];
-const messagesComponent = document.getElementById("messages_component");
-messagesComponent?.replaceChildren();
-const listMessages = (item) => {
-    const content = document.createElement("div");
-    content.innerHTML = `
-    <div class="m-auto px-4 py-2 text-center text-gray-500 ring-2 ring-red-300 rounded-2xl">
-    <div class="mx-auto mb-4 bg-gray-500 w-16 h-16 rounded-full"></div>
-    <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">
-    ${item.title}
-    </h3>
-    <p>${item.body}</p>
-    </div>`;
-    messagesComponent?.appendChild(content);
-};
-messageContent.map((item) => listMessages(item));
+export { messageContent };
