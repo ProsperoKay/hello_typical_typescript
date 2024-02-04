@@ -1,12 +1,33 @@
+import { messageContent, Content } from "./messages";
+
+const messagesComponent = document.getElementById("messages_component")
+
+const listMessages = (item: Content) => {
+    const content: HTMLElement = new HTMLElement();
+
+    content.innerHTML = `
+    <div class="m-auto px-4 py-2 text-center text-gray-500 ring-2 ring-red-300 rounded-2xl">
+    <div class="mx-auto mb-4 bg-gray-500 w-36 h-36 rounded-full"></div>
+    <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">
+        ${item.title}
+    </h3>
+    <p>${item.body}</p>
+    </div>`
+
+    messagesComponent?.appendChild(content)
+}
+
+const allContent = messageContent()
+
 
 // How do you know if someone is a TypeScript developer?
 // Just ask them their type!
 
-type Uid = string | number
-type UserInfo = { name: string, uid: Uid }
+type UserID = string | number
+type UserInfo = { name: string, uid: UserID }
 
 
-const query = (uid: Uid, item: string) => {
+const query = (uid: UserID, item: string) => {
     console.log(`finding user: ${uid} with ${item}... `)
 };
 
