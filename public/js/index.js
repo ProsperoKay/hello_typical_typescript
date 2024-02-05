@@ -157,7 +157,6 @@ messagesComponent?.replaceChildren();
 const listMessages = (item) => {
     const content = document.createElement("div");
     content.innerHTML = `
-
     <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-xl shadow">
     <svg class="w-7 h-7 text-gray-500 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
         fill="currentColor" viewBox="0 0 200 200">
